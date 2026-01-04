@@ -8,7 +8,6 @@ This guide covers installing CommandRM server and agents on various platforms.
 - [Server Installation](#server-installation)
   - [One-Click Installer](#one-click-installer)
   - [Manual Installation](#manual-installation)
-  - [Docker](#docker)
 - [Agent Installation](#agent-installation)
   - [Interactive Installation](#interactive-installation)
   - [Silent/Automated Installation](#silentautomated-installation)
