@@ -1,6 +1,6 @@
-# CommandRM Releases
+# CommandRM
 
-Official release binaries for [CommandRM](https://github.com/BBBradyH/commandrm) - a cross-platform remote management solution for IT administrators.
+A cross-platform remote management solution for IT administrators.
 
 ## What is CommandRM?
 
@@ -115,10 +115,6 @@ sha256sum -c checksums.txt --ignore-missing
 - [API Documentation](docs/API.md) - REST API endpoints
 - [Security Guide](docs/SECURITY.md) - Security best practices
 
-## Source Code
-
-The source code is available at [github.com/BBBradyH/commandrm](https://github.com/BBBradyH/commandrm).
-
 ## License
 
-MIT License - see the [main repository](https://github.com/BBBradyH/commandrm) for details.
+MIT License
