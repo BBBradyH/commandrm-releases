@@ -100,18 +100,12 @@ sudo ./commandrm-server-setup --express
 
 ### Manual Installation
 
-For custom deployments or development:
+For manual installation, download the server binary from [GitHub Releases](https://github.com/BBBradyH/commandrm-releases/releases):
 
 ```bash
-# Clone repository
-git clone https://github.com/BBBradyH/commandrm.git
-cd commandrm
-
-# Build server
-go build -o commandrm-server ./cmd/server
-
-# Build web frontend
-cd web && npm install && npm run build && cd ..
+# Download server binary (Linux x64 example)
+curl -LO https://github.com/BBBradyH/commandrm-releases/releases/latest/download/commandrm-server-linux-amd64
+chmod +x commandrm-server-linux-amd64
 
 # Create configuration
 cat > .env << 'EOF'
@@ -123,31 +117,16 @@ PRODUCTION_MODE=true
 EOF
 
 # Run database migrations
-./commandrm-server migrate
+./commandrm-server-linux-amd64 migrate
 
 # Create admin user
-./commandrm-server user create -u admin -e admin@example.com -p SecurePassword123 --admin
+./commandrm-server-linux-amd64 user create -u admin -e admin@example.com -p SecurePassword123 --admin
 
 # Create enrollment key for agents
-./commandrm-server enrollment create -d "Production agents"
+./commandrm-server-linux-amd64 enrollment create -d "Production agents"
 
 # Start server
-./commandrm-server serve
-```
-
-### Docker
-
-```bash
-# Using docker-compose
-docker-compose up -d
-
-# Or manually
-docker build -t commandrm-server .
-docker run -d \
-  -p 8080:8080 \
-  -v commandrm-data:/data \
-  -e AUTH_JWT_SECRET=your-secret-here \
-  commandrm-server
+./commandrm-server-linux-amd64 serve
 ```
 
 ## Agent Installation
